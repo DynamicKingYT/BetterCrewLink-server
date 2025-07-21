@@ -1,0 +1,14 @@
+app = "bettercrewlink-server"
+
+[build]
+  builder = "heroku/buildpacks:20"
+
+[env]
+  PORT = "9736"
+
+[[services]]
+  internal_port = 9736
+  protocol = "tcp"
+
+  [[services.ports]]
+    port = 9736
